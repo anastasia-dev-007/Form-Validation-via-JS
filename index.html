@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form id = "registrationForm" onsubmit="return validateForm()">
+            <fieldset>
+                <legend><b>Personal details:</b></legend>
+                <label for="name">Name:</label>
+                <input id="name" placeholder="John" />
+                <p id="alertName"></p>
+                <label for="surname">Surname:</label>
+                <input id="surname" placeholder="Smith"/>
+                <p id="alertSurname"></p>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="079000000">
+                <p id="alertPhone"></p>
+                <br /><br />
+
+                <table>
+                    <tr>
+                        <td>Gender:</td>
+                        <td><input type="checkbox" id="gender1" name="male" value="male">
+                            <label for="gender1">male</label>
+                            <input type="checkbox" id="gender2" name="female" value="female">
+                            <label for="gender2">female</label>
+                            <input type="checkbox" id="gender3" name="other" value="other">
+                            <label for="gender3">other</label>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+
+                <label for="birthday">Birth date:</label>
+                <input type="date" id="birthday" name="birthday">
+                <br /><br />
+
+                <table>
+                    <tr>
+                        <td>Employment:</td>
+                        <td><input type="checkbox" id="status1" name="emloyed" value="employed">
+                            <label for="status1">employed</label>
+                            <input type="checkbox" id="status2" name="unemployed" value="unemployed">
+                            <label for="status2">unemployed</label>
+                            <input type="checkbox" id="status3" name="student" value="student">
+                            <label for="status3">student</label>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+
+                <label for="language">Language:</label>
+                <select id="language" name="language" size="3" multiple>
+                    <option value="English">English</option>
+                    <option value="Romanian">Romanian</option>
+                    <option value="Russian">Russian</option>
+                </select>
+                <br /><br />
+                <label for="myfile">Upload photo:</label>
+                <input type="file" id="file" name="file">
+                <br />
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend><b>Address details:</b></legend>
+                <table>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea name="address" rows="1" cols="60" placeholder="str. Riga, 69"></textarea></td>
+                    </tr>
+                </table>
+                <label for="city">City:</label>
+                <input id="city" placeholder="Barcelona">
+                <br /><br />
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="Spain">Spain</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Egipt">Egipt</option>
+                </select>
+                <br /><br />
+                <!-- To think how to narrow box for ZIP Code -->
+                <label for="zip">ZIP Code:</label>
+                <input type="text" name="zip" placeholder="2064" maxlength="4" style="width: 30px;" />
+                <!-- Narrowed the ZIP code box using style -->
+            </fieldset>
+            <br /><br />
+
+            <fieldset>
+                <legend><b>Travel details:</b></legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="originicountry">Origin country:</label><br />
+                            <select id="originicountry" name="origincountry">
+                                <option value="Moldova">Moldova</option>
+                                <option value="Romania">Romania</option>
+                                <option value="Ukraina">Ukraina</option>
+                                <option value="Bulgary">Bulgary</option>
+                                <option value="Russia">Russia</option>
+                            </select>
+                        </td>
+                        <td><label for="destinationcountry">Destination country:</label><br />
+                            <input list="destinationcountry" name="destinationcountry">
+                            <datalist id="destinationcountry">
+                                <option value="Bali">Bali</option>
+                                <option value="Singapure">Singapure</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Australia">Australia</option>
+                                <option value="USA">USA</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="South Coreea">South Coreea</option>
+                                <option value="Netherlands">Netherlands</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="France">France</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Island">Island</option>
+                            </datalist>
+                        </td>
+                        <td><label for="flightdate">Flight date:</label><br />
+                            <input type="date" id="flightdate" name="flightdate" />
+                        </td>
+                        <td>
+                            <label for="returndate">Return date:</label><br />
+                            <input type="date" id="returndate" name="returndate">
+                        </td>
+                        <td>
+                            <label for="persons">Persons:</label><br />
+                            <input type="number" id="persons" name="person" min="0" max="2" style="width: 30px;" />
+                        <td><br /><input type="button" onclick="alert('OK!')" value="OK">
+                        </td>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br /><br />
+
+            <label for="yourtext"><b>Describe your dream destination:</b></label><br />
+            <textarea name="yourtext" id="yourtext" rows="10" cols="100"></textarea>
+            <br /><br />
+            <label>Upload a photo from your last travel:</label>
+            <input type="file" id="lasttravel" name="lasttravel" />
+            <br /><br />
+
+            <fieldset>
+                <legend><b>Contact details:</b></legend>
+                <label for="email">e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="john.smith@gmail.com" maxlength="100">
+                <br /><br />
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password">
+                <br /><br />
+                <input type="submit" value="Send">
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend><b>Random details:</b></legend>
+                <label for="color">Select your favorite color:</label>
+                <input type="color" id="color" name="color" value="ff0000">
+                <br /><br />
+                <label for="catbday">Your cat's birthday:</label>
+                <input type="datetime-local" id="catbday" name="catbday">
+                <br /><br />
+                <label for="maritalstatus">Here is a hidden field:</label>
+                <input type="hidden" id="maritalstatus" name="maritalstatus" value="married">
+                <br /> <small>there is marital status</small>
+                <label for="url">Share your favorite website:</label>
+                <input type="url" id="url" name="url">
+            </fieldset>
+
+            <br /><br />
+            <input id = "submitBtn" type="submit" value="Submit Form">
+
+        </form>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
